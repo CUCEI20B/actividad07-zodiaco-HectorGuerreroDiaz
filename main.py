@@ -1,13 +1,16 @@
-from numpy import array
 
-FechaInicio = array([22, 21, 20, 21, 21, 21, 22, 23, 24, 23, 23, 23])
-SignosZodiacales = array(["Capricornio","Acuario","Piscis","Aries","Tauro","Geminis","Cancer","Leo","Virgo","Libra","Escorpio","Sagitario"])
+
+FechaInicio = [22, 21, 20, 21, 21, 21, 22, 23, 24, 23, 23, 23]
+SignosZodiacales = ["capricornio","acuario","piscis","aries","tauro","geminis","cancer","leo","virgo","libra","escorpio","sagitario"]
+
 
 def Zodiaco(day, month):
     temp = month - 1
-    if(FechaInicio[month] < day):
+    fecha = FechaInicio[month]
+    if(fecha < day):
         temp = temp + 1
-    return SignosZodiacales[temp]
+    result = SignosZodiacales[temp]
+    return result
 
 
 day = int(input("Digame su dia: "))
